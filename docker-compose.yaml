@@ -1,0 +1,30 @@
+version: "2"
+services:
+  microservice1:
+    image: microservice1
+    restart: on-failure
+    tty: true
+    hostname: microservice1
+    mem_limit: 1024M
+    mem_reservation: 512M
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - Network_app
+
+  microservice2:
+    image: microservice2
+    restart: on-failure
+    tty: true
+    hostname: microservice2
+    mem_limit: 4096M
+    mem_reservation: 2048M
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - Network_app
+
+networks:
+  Network_app:
