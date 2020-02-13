@@ -12,7 +12,7 @@
 	<modules>
 		<module>microservice1</module>
 		<module>microservice2</module>
-		<module>microservice3</module>
+		<module>microservice4</module>
 	</modules>
 
 </project>

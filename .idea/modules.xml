@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/microservice1/microservice1.iml" filepath="$PROJECT_DIR$/microservice1/microservice1.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice2/microservice2.iml" filepath="$PROJECT_DIR$/microservice2/microservice2.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice3/microservice3.iml" filepath="$PROJECT_DIR$/microservice3/microservice3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice4/microservice4.iml" filepath="$PROJECT_DIR$/microservice4/microservice4.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/microservices-prometheus-demo.iml" filepath="$PROJECT_DIR$/.idea/microservices-prometheus-demo.iml" />
     </modules>
   </component>
