@@ -19,11 +19,7 @@ q
 Amicroservice2/src/main/java/com/example/demo/DemoApplication.java,5/c/5c5112d4e022970d30879201c420c8a8528cfa61
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-q
-Amicroservice3/src/main/java/com/example/demo/DemoApplication.java,9/7/97685ecb89fba2956e7872a1ed5472dbdeb56a07
 I
 prometheus/prometheus.yml,2/1/2195c72987a6b3f2c1afeaf7568ad8d407cc8eb8
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-E
-microservice3/pom.xml,f/7/f77c9de0255ac850c0e1e1e42a85ef5d5ae2020e
