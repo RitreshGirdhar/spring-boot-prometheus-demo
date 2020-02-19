@@ -2,11 +2,16 @@ version: "2"
 services:
   microservice1:
     image: microservice1
+    container_name: microservice1
+    build:
+      context: ./microservice1
+      dockerfile: Dockerfile
     restart: on-failure
     tty: true
-    hostname: microservice1
     mem_limit: 1024M
     mem_reservation: 512M
+    ports:
+    - 8080:8080
     volumes:
       - /etc/hosts:/etc/hosts
       - /var/run/docker.sock:/var/run/docker.sock
@@ -14,12 +19,17 @@ services:
       - Network_app
 
   microservice2:
+    container_name: microservice2
+    build:
+      context: ./microservice2
+      dockerfile: Dockerfile
     image: microservice2
     restart: on-failure
     tty: true
-    hostname: microservice2
-    mem_limit: 4096M
-    mem_reservation: 2048M
+    mem_limit: 1024M
+    mem_reservation: 512M
+    ports:
+      - 9090:9090
     volumes:
       - /etc/hosts:/etc/hosts
       - /var/run/docker.sock:/var/run/docker.sock
@@ -40,7 +50,7 @@ services:
     ports:
       - 9090:9090
     volumes:
-      - /Users/ritgirdh/Desktop/codebase/study/microservices-prometheus-demo/prometheus/:/etc/prometheus/
+      - /Users/ritgirdh/Desktop/codebase/study/microservices-prometheus-demo/prometheus/conf/:/etc/prometheus/
     command: "--config.file=/etc/prometheus/prometheus.yml --web.enable-lifecycle"
     networks:
       - Network_app
