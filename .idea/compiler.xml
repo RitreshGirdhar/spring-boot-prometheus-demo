@@ -18,7 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="microservice1" options="" />
-      <module name="microservice2" options="-parameters" />
+      <module name="microservice2" options="" />
     </option>
   </component>
 </project>
