@@ -63,8 +63,20 @@ Kill microservice2
 ![Alt text](images/microservice2-show-down.png?raw=true "Show microservices up and down both microservices")
 
 
-In case you make any changes in prometheus.yml run below command it will reload the scrape configuration.
+In case you make any changes in prometheus.yml run below command it will reload the scrape configuration. 
 ```aidl
 curl -s -XPOST localhost:9090/-/reload
 ```
-
+Above command will only work if you run prometheus with --web.enable-lifecycle mode. Refer docker-compose
+```aidl
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus
+    ports:
+      - 9999:9090
+    volumes:
+      - /Users/ritgirdh/Desktop/codebase/study/microservices-prometheus-demo/prometheus/conf/:/etc/prometheus/
+    command: "--config.file=/etc/prometheus/prometheus.yml --web.enable-lifecycle"
+    networks:
+      - Network_app
+```       
