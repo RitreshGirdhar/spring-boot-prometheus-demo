@@ -1,4 +1,4 @@
-# Microservices Prometheus Demo
+# Prometheus + Grafana set up to pull metrics from Microservices
 Docker based application to pull metrics from Microservices.
 
 #### Pre-requisite
