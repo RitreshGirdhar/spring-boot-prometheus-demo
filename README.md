@@ -80,3 +80,32 @@ Above command will only work if you run prometheus with --web.enable-lifecycle m
     networks:
       - Network_app
 ```       
+
+
+### Docker monitoring 
+Its always good to monitor docker as well. Use google cAdvisor docker image for docker monitoring
+```
+docker run \
+  -d \
+  --rm \
+  --name cadvisor \
+  -p 8888:8080 \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:rw \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  google/cadvisor
+```
+Update prometheus.yml Prometheus configuration file and reload configuration by invoking below curl command.
+```
+- job_name: cAdvisor
+  scrape_interval: 5s
+  static_configs:
+  - targets:
+    - <ip>:8888
+```
+```
+curl -ivk -XPOST http://localhost:9090
+```
+![Alt text](images/cadvisor.png?raw=true "cAdvisor images")
+
